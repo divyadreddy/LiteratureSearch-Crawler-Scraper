@@ -6,5 +6,6 @@ urlpatterns = [
     path('IEEE', views.ieee),
     path('Springer', views.springer),
     path('ScienceDirect', views.sciencedirect),
-    path('ACM', views.acm)
+    path('ACM', views.acm),
+    path('receive_data',views.receive_data)
 ]

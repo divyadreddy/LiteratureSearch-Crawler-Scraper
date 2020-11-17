@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, FileResponse
+import os
 
 # Create your views here.
 def landing(request):
@@ -17,3 +18,13 @@ def sciencedirect(request):
 
 def springer(request):
 	return render(request,'Springer.html')
+
+def receive_data(request):
+	print("basic = ",request.POST['basic'])
+	return sendDownloadedFile()
+
+def sendDownloadedFile():
+	path = os.getcwd()+"/output.json"
+	print("Sending file...")
+	response = FileResponse(open('manage.py', 'rb'),as_attachment=True)
+	return response
