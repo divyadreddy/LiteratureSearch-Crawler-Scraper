@@ -2,9 +2,18 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(request):
-	return HttpResponse("Hello, world. You're at the polls index.")
-	# return render(request,'templates/myapp/landing.html')
+def landing(request):
+	return render(request,'landing.html')
+	# return HttpResponse("Hello, world. You're at the polls index.")
 
 def acm(request):
-	return HttpResponse("ACM page renders here")
+	return render(request,'ACM.html')
+
+def ieee(request):
+	return render(request,'IEEE.html')
+
+def sciencedirect(request):
+	return render(request,'ScienceDirect.html')
+
+def springer(request):
+	return render(request,'Springer.html')
