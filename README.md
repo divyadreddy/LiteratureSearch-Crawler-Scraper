@@ -1,4 +1,4 @@
-# SSD33
+# Systematic Literature Review : Crawler and Scraper
 
 ## Website
 It lets you search in ACM, IEEE, ScienceDirect and Springer all at once. It fetches the bibTeX and gives it as output which is a JSON file.
